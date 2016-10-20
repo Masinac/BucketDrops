@@ -2,4 +2,7 @@
     <string name="app_name">BucketDrops</string>
     <string name="add_drop">Add a Drop</string>
     <string name="logo_description">Logo</string>
+    <string name="hint_at_drop">What is it?</string>
+    <string name="dialog_add_button_text">Add it</string>
+    <string name="close_button_description">Close button</string>
 </resources>

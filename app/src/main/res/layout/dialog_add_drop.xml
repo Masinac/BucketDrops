@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/dialog_add_drop_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_drop"
+        android:layout_marginTop="@dimen/dialog_add_drop_title_vertical_margin"
+        android:layout_marginBottom="@dimen/dialog_add_drop_title_vertical_margin"
+        android:textSize="@dimen/dialog_add_drop_title_text_size"/>
+
+    <ImageButton
+        android:id="@+id/dialog_close_button"
+        android:background="@null"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/close_button_description"
+        android:layout_alignTop="@id/dialog_add_drop_title"
+        android:layout_alignBottom="@id/dialog_add_drop_title"
+        android:src="@drawable/ic_close"/>
+
+    <EditText
+        android:id="@+id/dialog_drop_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_add_drop_title"
+        android:hint="@string/hint_at_drop"
+        android:padding="16dp" />
+
+    <DatePicker
+        android:id="@+id/dialog_date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_drop_text"/>
+
+    <Button
+        android:id="@+id/dialog_add_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_date_picker"
+        android:textAllCaps="false"
+        android:text="@string/dialog_add_button_text"/>
+
+</RelativeLayout>
