@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/dialog_add_drop_title"
         android:hint="@string/hint_at_drop"
+        android:inputType="textVisiblePassword"
         android:padding="16dp" />
 
     <DatePicker

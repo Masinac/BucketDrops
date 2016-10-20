@@ -40,6 +40,11 @@ public class ActivityMain extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(this, "my prefered method", Toast.LENGTH_SHORT).show();
+        showDialogAdd();
+    }
+
+    private void showDialogAdd() {
+        DialogAdd dialog = new DialogAdd();
+        dialog.show(getSupportFragmentManager(), "Add");
     }
 }
