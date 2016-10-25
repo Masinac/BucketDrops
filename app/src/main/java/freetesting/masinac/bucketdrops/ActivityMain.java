@@ -6,9 +6,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.facebook.stetho.Stetho;
+import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
+
+import io.realm.Realm;
 
 public class ActivityMain extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,6 +21,14 @@ public class ActivityMain extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Realm.init(this);
+
+        Stetho.initialize(
+                Stetho.newInitializerBuilder(this)
+                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                        .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
+                        .build());
+
         setContentView(R.layout.activity_main);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -26,9 +37,9 @@ public class ActivityMain extends AppCompatActivity implements View.OnClickListe
 
         setSupportActionBar(toolbar);
         initBackgroundImage();
-
-
     }
+
+
 
     private void initBackgroundImage() {
         ImageView backgroundImageView = (ImageView) findViewById(R.id.background);
