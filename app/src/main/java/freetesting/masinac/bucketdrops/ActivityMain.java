@@ -2,6 +2,7 @@ package freetesting.masinac.bucketdrops;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class ActivityMain extends AppCompatActivity implements View.OnClickListe
 
     Toolbar toolbar;
     Button addDropButton;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class ActivityMain extends AppCompatActivity implements View.OnClickListe
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         addDropButton = (Button) findViewById(R.id.btn_add_drop);
         addDropButton.setOnClickListener(this);
+        recyclerView = (RecyclerView) findViewById(R.id.drops);
 
         setSupportActionBar(toolbar);
         initBackgroundImage();
